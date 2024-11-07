@@ -18,6 +18,11 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error("Error connecting to MongoDB:", error));
 
+// Welcome route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Skilled Partner API!');
+});
+
 app.use('/api', emailRoutes);
 
 const PORT = process.env.PORT || 5000;
