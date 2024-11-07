@@ -8,8 +8,8 @@ async function sendConfirmationEmail(email) {
     to: email,
     from: 'info@skilledpartner.com', // Use your verified SendGrid sender email
     subject: 'Thank you for subscribing!',
-    text: `Hello! Thanks for subscribing to our pre-launch updates. We’ll notify you when we launch.`,
-    html: `<p>Hello! Thanks for subscribing to our pre-launch updates. We’ll notify you when we launch.</p>`,
+    text: `Hello! Thanks for subscribing to our pre-launch updates. We’ll notify you when we launch`,
+    html: `<p>Hello! Thanks for subscribing to our pre-launch updates. We’ll notify you when we launch</p>`,
   };
   try {
     await sgMail.send(msg);
